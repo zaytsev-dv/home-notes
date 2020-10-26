@@ -5,7 +5,7 @@ COPY . .
 RUN mvn clean install
 
 FROM java:8-jre-alpine
-COPY --from=builder /src/target/config-server.jar /config-server.jar
+COPY --from=builder /src/target/home-notes.jar /home-notes.jar
 ENTRYPOINT ["java","-jar","home-notes.jar"]
 
 
