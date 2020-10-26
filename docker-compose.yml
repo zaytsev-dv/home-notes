@@ -1,0 +1,24 @@
+version: '3.0'
+services:
+  nginx:
+    container_name: nginx
+    image: nginx
+    restart: always
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    links:
+      - notes
+
+  notes:
+    restart: always
+    container_name: home_notes
+    image: zaytsevdv/home-notes:prod-latest
+    ports:
+      - "8080:8080"
+
+networks:
+  default:
+    external:
+      name: skynet
