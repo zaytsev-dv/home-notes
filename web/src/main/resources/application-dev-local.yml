@@ -1,3 +1,7 @@
 spring:
   application:
     name: home_notes
+
+eureka:
+  client:
+    service-url: http://discovery:8761
