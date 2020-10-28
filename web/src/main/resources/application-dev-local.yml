@@ -4,4 +4,5 @@ spring:
 
 eureka:
   client:
-    service-url: http://discovery:8761
+    service-url:
+      defaultZone: http://discovery:8761
