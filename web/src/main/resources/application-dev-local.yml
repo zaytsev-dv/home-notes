@@ -2,7 +2,7 @@ spring:
   application:
     name: home_notes
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://discovery:8761/eureka/
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://discovery:8761/eureka/
